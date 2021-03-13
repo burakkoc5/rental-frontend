@@ -1,0 +1,24 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <h5 style="color:blue;">Müşteriler</h5>
+<table *ngIf="dataLoaded==true"class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>İsim</th>
+            <th>Soyisim</th>
+            <th>Email</th>
+            <th>Şirket İsmi</th>
+        </tr>
+    </thead>
+    <tr *ngFor = "let customer of customers" style="color:black">
+        <td>{{customer.id}}</td>
+        <td>{{customer.firstName}}</td>
+        <td>{{customer.lastName}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.companyName}}</td>
+
+    </tr>
+
+</table>
